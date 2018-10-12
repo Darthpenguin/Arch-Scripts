@@ -1,7 +1,7 @@
 #!/bin/bash
 [[ $EUID -ne 0 ]] && echo "error: you cannot perform this operation unless you are root." && exit 1
 # Upgrade system and AUR packages
-sudo -u jpaxton bash -c "pacaur -Syu"
+sudo -u $USER bash -c "pacaur -Syu"
 # Remove orphaned packages
 echo :: Starting Package cleanup...
 if [[ $(pacman -Qtdq | head -c1 | wc -c) -eq 0 ]]; then
