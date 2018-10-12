@@ -1,0 +1,10 @@
+# Copy this script to ~/.local/share/nemo/actions/
+[Nemo Action]
+Name=Send via Bluetooth
+Comment=Send via Bluetooth: %F
+Exec=blueman-sendto %F
+Icon-Name=bluetooth
+Selection=any
+Extensions=nodirs;
+Quote=double
+Dependencies=blueman-sendto;
